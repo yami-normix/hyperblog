@@ -1,4 +1,27 @@
-Cometi muchos errores iniciando en Git pero decidi seguir
+Cometí muchos errores iniciando en Git pero decidi seguir
 ya que se debe perseverar siempre
 No desistas, sigue constantemente persiguiendo
-cada uno de tus metas
+cada una de tus metas.
+Ahora puedo decir que aunque la lucha parezca relativamente dificil, siempre habrá alguien que te motive a seguir.
+Mi resumen es este:
+Pwd te sirve para saber donde te encuentras
+cd / es para ir al home
+cd /c es para ir al c:
+mkdir es para crear una carpeta pero debes estar justo donde quieres crearla
+touch es para crear un archivo de texto plano
+cat te muestra lo que contiene el archivo 
+rm te sirve para eliminar ese archivo
+clear es para limpiar la consola
+history para ver el historial
+!(#) para llamar un comando en específico
+git init inicias el repositorio
+Y ahora todo es lo mismo con git add agregas al staging los cambios y con git commit lo envias al repositorio, ahora bien antes
+de hacer un commit recuerda el comando git status como buena práctica.
+Puedes ver la historia de los commits con git log, git log --stat el cuál es más específico,
+ git log --all --graph --decorate --oneline. El cuál mostrará en un arbolito los commits realizados.
+ Para crear una rama debes invocar el comando git branch más el nombre, luego te diriges a ella con git checkout más el nombre y comienzas
+ a hacer cambios, agregarlos y comitearlos, luego lo fusionas con master a tráves de un merge, el cuál lo harías asi: 
+ Colocas el comando git checkout master y luego git merge más el nombre de la rama que quieres fusionar con master.
+ Si ya estas en GitHub cada vez que hagas un cambio desde la consola, lo puedes mandar a la web con el comando git push,
+ y si alguien más está trabajando en este mismo proyecto y quieres traerte esos cambios de la web invocas git pull.
+ Continuará...
