@@ -26,5 +26,5 @@ Puedes ver la historia de los commits con git log, git log --stat el cuál es m�
  y si alguien más está trabajando en este mismo proyecto y quieres traerte esos cambios de la web invocas git pull.
  Continuará...
 
- Master 1
- Master 2
+ 
+ 
