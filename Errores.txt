@@ -25,3 +25,5 @@ Puedes ver la historia de los commits con git log, git log --stat el cuál es m�
  Si ya estas en GitHub cada vez que hagas un cambio desde la consola, lo puedes mandar a la web con el comando git push,
  y si alguien más está trabajando en este mismo proyecto y quieres traerte esos cambios de la web invocas git pull.
  Continuará...
+
+ Master 1
