@@ -1,4 +1,9 @@
          Introducción a la terminal y línea de comandos
+Date = muestra la fecha
+echo = muestra un mensaje
+man (nombre del comando) = brinda un manual del comando
+history = historial de comandos
+!(#) = invoca un comando que ya fue ejecutado
 Se encuentran comandos para organizar los archivos como:
 ls -al = muestra una lista de archivos incluyendo los ocultos
 ls -l = muestra las extensiones de los archivos como su usuario, permisos, fecha
@@ -8,11 +13,15 @@ ls -X = Ordena los elementos primero por extensión y luego por nombre
 ls -x = Ordena los elementos primero por nombre y luego por extensión
 ls -R = muestra el contenido de todos los subdirectorios de forma recursiva, al igual que con ctrl + recursiva
 ls -S = ordena los resultados por tamaño de archivos
+ls ../ = ver el contenido del directorio anterior
 pwd = saber en qué carpeta estamos
 cd = change directory, cambiar de directorio
+cd .. = directorio padre o directorio anterior
+cd . = directorio actual
 cp (archivo que se  va a copiar) (directorio hacia el que se va mover) = copiar archivos
 rm = eliminar un archivo
 mv (nombre del archivo a mover) (directorio hacia el que se va mover) = mover un archivo
+rmdir = eliminar un directorio, pero antes debes haber eliminado todo el contenido de ese directorio
           Utilidades interactivas
 vim = editor de texto, para inserción se presiona la letra i, para guardar y salir es esc :x
 nano = editor de texto, estamos en modo inserción, para salir ctrl + X
@@ -30,10 +39,55 @@ sed '$d' (nombre del archivo) = eliminar la última línea de ese archivo
 awk = comando para el tratamiento de texto estructurado, es decir separado por comas, etc.
 awk -F ';' '{ print $1 }' (nombre del archivo) = el delimitador de esto es el ; y dejará solo la primer columna gracias al $1. Es decir que 
 imprimirá o mostrará solo la primer columna
-awk -F ';' 'NR > 1 && $3 > 0 { print $1, $3 * $4 }' (nombre del archivo) = En este ejemplo, imprimirá con condiciones, es decir que si la columna 3
-es mayor que cero, debe imprimir la columna 1 y la columna 3 multiplicada por la columna 4.
+awk -F ';' 'NR > 1 && $3 > 0 { print $1, $3 * $4 }' (nombre del archivo) = En este ejemplo, imprimirá con condiciones, es decir que si el número de línea es mayor que 1
+, y la columna 3 es mayor que cero, imprimirá la columna 1, y la columna 3 multiplicada por la columna 4.
 mysql -h 127.0.0.1 -u root -p1234 < dump1.sql = en este ejemplo lo que se contiene en el archivo dump1.sql se está mandando al servidor sin necesidad de volverlo a escribir
 ls > archivos.txt se está redireccionando a la entrada, lo puedes abrir con vim para observar que es cierto
 ls -l >> archivos.txt = estarás agregando al final de al archivo anterior este resultado.
+ls -l l more (nota eso que parece l antes del more en realidad es una barra vertical) = mostrará el resultado largo en varias cesiones
+cat (nombre del archivo) l wc -l = (nota esa que parece l antes de wc es una barra vertical) = mostrará cúantas líneas tiene ese archivo
+      Administración de procesos en background y foreground.
+con el & al final de lo que se va lanzar, se manda a bakcground, es decir segundo plano
+Al ejecutar ctrl + Z despues de haber lanzado algo, lo tenemos en background y luego con fg lo traemos a foreground, es decir primer plano
+         Detener procesos
+ctrl + c = interrumpe el procesos
+kill -9 (número del proceso) = elimina ese proceso
+killall funciona similiar a kill, pero en vez de colocar el número del proceso, vamos a colocar el nombre del proceso
+      Alterar permisos
+chmod = cambia los permisos de modo, es decir que con este puedo quitar algún permiso a cada uno de los usuarios (cambia individual los permisos), por ejemplo:
+chmod u-x = estoy quitandome el permiso como dueño de ejecutar
+chmod o-x = estoy quitandole el permiso al grupo de usuarios de ejecutar
+chmod 777 = estoy otorgando los 3 permisos a los 3 usuarios
+chown = cambia quien es el propietario
+chgrp = cambia quien es el grupo de usuarios que puedan acceder al archivo
+sudo = se antepone antes de ejecutar ciertas cosas que al propietario le es denegado, o para instalar
+sudo apt install (nombre del programa) = instalando un programa
+sudo pip install pandas = instalando una librería pandas
+npm list -g --deth 0 = lista de paquetes instalados de forma global
+gzip (nombre del archivo) = comprimir archivo
+gzip -d (nombre del archivo) = descomprimir archivo
+tar cf (nombre del archivo a crear) (nombre de los archivos que quiero incorporar)/* = crea un archivo y combina los archivos de determinado directorio
+tar tf (nombre del archivo creado) = ver el contenido
+tar xf (nombre del archivo creado) = desagrupandolo
+tar czf (nombre del archivo a crear) (archivos a combinar)/* = creando, comprimiendo y combinando a la vez
+tar xzf (nombre del archivo creado) = recupero los archivos anteriores
+      Herramientas de búsqueda de archivos
+locate = busca en todo el sistema con tan solo un nombre, pero debes actualizar el sistema de datos antes con
+sudo update
+whereis = ubica comandos
+find = la más compleja, busca dentro de un árbol de directorios usando una serie de criterios
+find -user antonio -perm
+find . -type F -mtime +7 = muestra los archivos modificados hace más de 7 días
+     Herramientas para interactuar a tráves de HTTP
+curl = busca sitios web https para analizar
+wget = descarga sitios https
+     Varibles de entorno
+export VAR= valor, donde VAR es la variable y valor lo que queremos que exista
+ejemplo: MI_VALOR=norma
+     Programación de tareas
+at = para hacer la tarea dentro de un intervalo de tiempo
+cron = programa o crea nuevas tareas que pueden ejecutarse mientras hacemos otra cosa.
+ejemplo: crontab -e                           
+
 
 
