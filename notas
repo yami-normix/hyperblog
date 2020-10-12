@@ -1,0 +1,31 @@
+         Introducción a la terminal y línea de comandos
+Se encuentran comandos para organizar los archivos como:
+ls -al = muestra una lista de archivos incluyendo los ocultos
+ls -l = muestra las extensiones de los archivos como su usuario, permisos, fecha
+ls -lh = muestra lo mismo que ls -l pero en KB 
+ls -t = muestra los archivos pero según fecha de modificación
+ls -X = Ordena los elementos primero por extensión y luego por nombre
+ls -x = Ordena los elementos primero por nombre y luego por extensión
+ls -R = muestra el contenido de todos los subdirectorios de forma recursiva, al igual que con ctrl + recursiva
+ls -S = ordena los resultados por tamaño de archivos
+pwd = saber en qué carpeta estamos
+cd = change directory, cambiar de directorio
+cp (archivo que se  va a copiar) (directorio hacia el que se va mover) = copiar archivos
+rm = eliminar un archivo
+mv (nombre del archivo a mover) (directorio hacia el que se va mover) = mover un archivo
+          Utilidades interactivas
+vim = editor de texto, para inserción se presiona la letra i, para guardar y salir es esc :x
+nano = editor de texto, estamos en modo inserción, para salir ctrl + X
+        Utilidades batch
+cat = muestra el contenido de un archivo
+head = muestra por defecto las primeras 10 líneas de un archivo
+head -n (#) (nombre de archivo) = establecer cuántas de las primeras líneas del archivo quieres ver
+tail = muestra por defecto las últimas 10 líneas de un archivo
+tail -n (#) (nombre del archivo)= establecer cuántas de las últimas líneas queremos ver
+grep (palabra clave) (nombre del archivo)  = buscar en el archivo la fila o línea en la que aparece esa expresión
+grep -i (palabra clave) (nombre del archivo) = buscar esa expresión sin importar minúsculas o mayúsculas
+sed = reemplazar una versión por otra, pero no  modifica sino que crea un nuevo flujo con la modificación
+sed 's/palabra a cambiar/nueva palabra/g' (nombre del archivo) = cambiar una palabra de manera global
+sed '$d' (nombre del archivo) = eliminar la última línea de ese archivo
+awk = comando para el tratamiento de texto estructurado, es decir separado por comas, etc.
+
