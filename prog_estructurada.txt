@@ -1,0 +1,93 @@
+         RESUMEN
+Tipos de datos:
+int = entero
+float = decimal
+double = similar al decimal pero tiene un espacio más grande en memoria para guardar  valores
+char = caracter
+           Basicas
+printf(""); = imprimir en pantalla una instrucción, título o mensaje
+scanf(""); De esta manera estamos asignando algo a determinada variable.
+      Ejemplo:
+Si tenemos una variable int age; e imprimimos: printf("Ingrese su edad:"); entonces para que la persona
+pueda ingresar su nombre debemos hacer un scanf("%i", &age); en la que el %i hace referencia al tipo de dato (entero), 
+el símbol o letra & es que lo vamos a guardar en determinada variable en la que su nombre es age.
+             Intercambio de variables:
+Ej.
+int x = 10;
+int y = 5;
+int aux;
+
+    aux=x;
+    x=y;
+    y=aux;
+      Operadores aritmeticos;
++ 
+-
+*
+/
+% Este se llama módulo y lo que nos da de resultado es el residuo de una división.
+      Operadores de asignación, de incremento y decremento.
++=   Ej: a+= 5;   equivale A: a= a+5;
+-=   Ej: a-= 5;   equivale A: a= a-5;
+*=   Ej: a*= 5;   equivale A: a= a*5;
+/=   Ej: a/= 5;   equivale A: a= a/5;
+%=   Ej: a%= 5;   equivale A: a= a%5;
+     Operadores de incremento y decremento:
+++  Ej: a++       equivale A: a= a+1;
+--  Ej: a--       equivale A: a= a-1;
+    Condicionales:
+if()
+{
+    Aquí va el bloque de cumplimiento de condición
+}  
+if else()
+{
+    Si no se cumple la primer condición entra a esta otra condición
+}
+else
+{
+    Si no se cumple ninguna de las anteriores entra a esta última.
+} 
+      Operadores relacionales:
+< 
+>
+<=
+>=
+== Este es una comparación.
+     Operadores lógicos:
+&& (And) el resultado será verdadero si ambas condiciones son verdaderas
+|| (OR)el resultado será verdadero si alguna de las condiciones es verdaderas   
+!  (NOT)el reultado será inverso al operando
+
+Estructura de control para agilizar el flujo del programa en opciones múltiples:
+switch(nombre de variable)
+{
+    case 1:
+        printf("");
+    break;
+
+    case 2:
+        printf("");
+    break;
+}
+
+Estructuras de control repetitivas:
+while(condición)
+{
+    a++; Bloque al cumplimiento de la condición
+}
+
+for(int i = 0; i<10; i++)
+{
+    Bloque al cumplimiento de la condición
+}
+
+do
+{
+    a++; Bloque antes del cumplimiento de la condición
+}while();
+
+La diferencia entre el while y el do while es que en el do while la condición se prueba al final del mismo.
+
+Arreglos:
+Data_Type name [size]; Aquí lo estamos declarando solamente, va conformado por el tipo de dato, el nombre y el tamaño del arreglo.
