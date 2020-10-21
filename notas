@@ -44,8 +44,8 @@ awk -F ';' 'NR > 1 && $3 > 0 { print $1, $3 * $4 }' (nombre del archivo) = En es
 mysql -h 127.0.0.1 -u root -p1234 < dump1.sql = en este ejemplo lo que se contiene en el archivo dump1.sql se está mandando al servidor sin necesidad de volverlo a escribir
 ls > archivos.txt se está redireccionando a la entrada, lo puedes abrir con vim para observar que es cierto
 ls -l >> archivos.txt = estarás agregando al final de al archivo anterior este resultado.
-ls -l l more (nota eso que parece l antes del more en realidad es una barra vertical) = mostrará el resultado largo en varias cesiones
-cat (nombre del archivo) l wc -l = (nota esa que parece l antes de wc es una barra vertical) = mostrará cúantas líneas tiene ese archivo
+ls -l | more = mostrará el resultado largo en varias cesiones
+cat (nombre del archivo) | wc -l = mostrará cúantas líneas tiene ese archivo
       Administración de procesos en background y foreground.
 con el & al final de lo que se va lanzar, se manda a bakcground, es decir segundo plano
 Al ejecutar ctrl + Z despues de haber lanzado algo, lo tenemos en background y luego con fg lo traemos a foreground, es decir primer plano
