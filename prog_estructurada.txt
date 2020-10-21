@@ -91,3 +91,13 @@ La diferencia entre el while y el do while es que en el do while la condición s
 
 Arreglos:
 Data_Type name [size]; Aquí lo estamos declarando solamente, va conformado por el tipo de dato, el nombre y el tamaño del arreglo.
+Ej: int maxElements [5]; Esta es de tipo entero y se llama maxElements con un tamaño de 5
+
+Inicializar un arreglo:
+int maxElements[4] = {2, 12, 50, 40,};
+maxElements[0] = 2; Significa que en la posición cero se encuentra el número 2
+
+    Arreglo bidimensional o matriz:
+int maxElements [2][2];  Aquí está declarado  
+
+int matrix[3][4] = {{1,2,3,4},{5,6,7,8},{9,1,2,3};
